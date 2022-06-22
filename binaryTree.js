@@ -23,10 +23,14 @@ class BinaryTree {
     getMax(){
         // return the maximum value stored in the tree
     }
+    
+    // BONUS!
     height(node){
         // calculate the maximum amount of nodes in any one path from the given node
         // if not given a specific node, default to using the root node
     }
+    
+    // BONUS! 
     isBalanced(node){
         // return true or false based on whether the sub-tree starting at the given node is balanced
         // A tree is imbalanced if the height of one branch exceeds the other side by more than one level
