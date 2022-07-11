@@ -31,15 +31,9 @@ ___
 
 ## Setup
 
-* Clone down the starter code, install dependencies, and cd into project:
-```
-    $ git clone https://git.generalassemb.ly/shaw-kitajima/GA-Post-Course-CS.git
-    $ cd GA-Post-Course-CS/
-    $ npm i
-    $ cd binary-trees/
-```
+* Fork and Clone down the starter code. Open it in VSCode and install dependencies with `npm install`.
 
-* run the tests
+* Run the tests:
 ```
     $ npx mocha
 ```
@@ -59,25 +53,30 @@ Trees, like linked lists, are a foundational data type which are utilized in mor
     * The nodes at the end of the tree (the nodes with no children nodes) are called **leaves**
     * The length of the longest path from a leaf to the root is the tree's height
 
+![Part of a tree](https://miro.medium.com/max/1400/1*ziYvZzrttFYMXkkV9u66jw.png)
 ___
 
-## Describing Binary Trees
+# Describing Binary Trees
+* A binary tree is a tree in which every node has at most two children
+* The **left** and **right** properties could be set to ``null`` if the node has no child elements
+* There are many different types of Binary trees
 
-Binary trees are one of the specialized instances of regular trees
+![Types of Binary Trees](https://miro.medium.com/max/16000/1*CMGFtehu01ZEBgzHG71sMg.png)
 
-* Binary Trees still have root nodes
-* Each node will have, at most, two branches
+
+## Describing Binary Search Trees
+
+Binary trees are one of the specialized instances of binary trees. They follow all of the properties of a binary tree and...
+
 * Each node (except the root) will have the following properties:
     * The **value**
-    * The **left** property, which is a pointer to a node with a lesser value than the current node
-    * The **right** property, which is a pointer to a node with a greater value than the current node
-* The **left** and **right** properties could be set to ``null`` if the node has no child elements
-
+    * The **left** property, which is a pointer to a node with a **lesser value** than the current node
+    * The **right** property, which is a pointer to a node with a **greater value** than the current node
 ___
 
-## Visualize a Binary Tree
+## Visualize a Binary Search Tree
 
-* When we create a binary tree, we initialize it with a ``root`` property, which will refer to the first node
+* When we create a tree, we initialize it with a ``root`` property, which will refer to the first node
     * When you initialize a binary tree, root will not point to anything yet, so it will point to ``null``
 * When we add nodes to a tree, we have to add the node to the appropriate node
     * **❓ How do we know that you have reached the node that you will attach the new node to?**
@@ -85,18 +84,6 @@ ___
         * Hint, try adding 6 to the graphic below
 
 ![binary tree graphic](https://imgur.com/7Btz9OR.png)
-
-___
-
-## Binary Tree Operation Time Complexity
-
-Operation | Average | Worst Case
--- | -- | --
-Indexing (Access) | Θ(log n) | O(n)
-Insert | Θ(log n) | O(n)
-Delete | Θ(log n) | O(n)
-
-*We will explore what causes the difference between average and worst case time complexities when we discuss balance!*
 
 ___
 
@@ -112,14 +99,13 @@ There are typically two ways we think about traversing a data structure like a t
 * Depth-first searches
     * Start the root node
     * Go down the first path of the node until you hit a the end
-    * Start again from root node, but go down a different path
+    * Then backtracks until another path is found that hasn't currently been taken
     * And so on, until you have conquered the final path
 
 
 Consider you are playing chess:
 * **❓ Which search method are you using when you are considering all of the possible moves you could make next?**
 * **❓ Which search method are you using when you pick a move, and think about how far it could take you?**
-
 ___
 
 ## Review JS Object Property Accessing via Bracket Notation vs Dot Notation
@@ -150,7 +136,7 @@ When we use square bracket notation, we can pass in a JS expression to the brack
 
 ___
 
-## Traverse a Binary Tree with Looping
+## Traverse a Binary Search Tree with Looping
 
 When we want to insert an element to a binary tree, we have to traverse the binary tree to an appropriate node where we will choose to insert it at either that node's left or right property
 
@@ -178,8 +164,6 @@ So what does this look like in code?
         walker = walker[direction]
     }
 ```
-
-**❓ Is the code above depth-first or breadth-first?**
 
 When you are doing your exercises, don't forget to account for ``this.root``!
 
@@ -222,12 +206,23 @@ The code will probably look something like this:
     // then return our results
     return [data.left, data.right];
 ```
-**❓ Is the code above depth-first or breadth-first?**
 
 **❓ Why is it that we must define ``data`` outside of the counter function?**
 
+
 ___
 
+## Binary Tree Operation Time Complexity
+
+Operation | Average | Worst Case
+-- | -- | --
+Indexing (Access) | Θ(log n) | O(n)
+Insert | Θ(log n) | O(n)
+Delete | Θ(log n) | O(n)
+
+*We will explore what causes the difference between average and worst case time complexities when we discuss balance!*
+
+___
 
 ## Essential Questions
 1. How many direct parent nodes can any node in a tree have?
