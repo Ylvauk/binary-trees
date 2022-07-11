@@ -198,7 +198,7 @@ The code will probably look something like this:
 
 ___
 
-## Binary Tree Operation Time Complexity
+## Binary Search Tree Operation Time Complexity
 
 Operation | Average | Worst Case
 -- | -- | --
@@ -206,7 +206,7 @@ Indexing (Access) | Θ(log n) | O(n)
 Insert | Θ(log n) | O(n)
 Delete | Θ(log n) | O(n)
 
-*We will explore what causes the difference between average and worst case time complexities when we discuss balance!*
+**❓ There is a key condition that must be true about our binary search tree to get this great O(logn) time complexity? What is that condition? **
 
 ___
 
