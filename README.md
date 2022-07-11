@@ -206,7 +206,7 @@ Indexing (Access) | Θ(log n) | O(n)
 Insert | Θ(log n) | O(n)
 Delete | Θ(log n) | O(n)
 
-**❓ There is a key condition that must be true about our binary search tree to get this great O(logn) time complexity? What is that condition? **
+**❓ There is a key condition that must be true about our binary search tree to get this great O(logn) time complexity? What is that condition?**
 
 ___
 
