@@ -13,20 +13,6 @@
     - Traverse a binary tree with looping
     - Traverse a binary tree with recursion
 
----
-## Roadmap
-
-* Setup
-* Describing trees
-* Describing binary trees
-* Binary tree visualization
-* Binary tree operation time complexity
-* Review JS object property accessing via bracket notation vs dot notation
-* Use looping to traverse a binary tree
-* Use recursion to traverse a binary tree
-* Work on the exercises in breakout rooms
-* Go over the solutions to the exercises
-
 ___
 
 ## Setup
